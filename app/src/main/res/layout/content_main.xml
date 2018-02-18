@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/home"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.fortunecookie.fortunecookie2.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:showIn="@layout/app_bar_main">
+
+    <TextView
+        android:id="@+id/portfolioBalance"
+        android:layout_width="379dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="7dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textIsSelectable="false"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toTopOf="@+id/dynamictext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/staticText" />
+
+    // Static Text Under PB //
+
+    <TextView
+        android:id="@+id/portfolioGainLoss"
+        android:layout_width="343dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="47dp"
+        android:fontFamily="sans-serif"
+        android:gravity="bottom"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_green_dark"
+        android:textIsSelectable="false"
+        android:textSize="10pt"
+        app:layout_constraintBottom_toTopOf="@+id/weightChart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dynamictext"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <TextView
+        android:id="@+id/staticText"
+        android:layout_width="244dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="8dp"
+        android:gravity="bottom"
+        android:text="Welcome, Rex Schachere"
+        android:textAlignment="center"
+        android:textColor="#0a5e52"
+        android:textSize="8pt"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/portfolioBalance"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/dynamictext"
+        android:layout_width="189dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="top"
+        android:text="Total Portfolio Value"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="5pt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/portfolioBalance2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/portfolioBalance" />
+
+    <TextView
+        android:id="@+id/dynamictext2"
+        android:layout_width="194dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="top"
+        android:text="7 day return"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="4pt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/weightChart2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/weightChart"
+        android:layout_width="284dp"
+        android:layout_height="224dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginStart="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/portfolioBalance2" />
+
+    <!--<com.github.mikephil.charting.charts.PieChart-->
+        <!--android:id="@+id/weightChart2"-->
+        <!--android:layout_width="284dp"-->
+        <!--android:layout_height="224dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginEnd="47dp"-->
+        <!--android:layout_marginStart="47dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/portfolioBalance2" />-->
+
+</android.support.constraint.ConstraintLayout>
